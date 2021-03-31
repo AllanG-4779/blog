@@ -1,0 +1,24 @@
+.post-cont {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  min-height: 100%;
+}
+.post-cont > input {
+  padding: 4px;
+
+  width: 200px;
+}
+.post-cont > button {
+  padding: 10px;
+  width: 100px;
+  background-color: dodgerblue;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.post-cont > textarea{
+    padding:5px;
+}
