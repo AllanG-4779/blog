@@ -22,6 +22,7 @@ function App() {
           <logged.Provider value={[isLogged, setLogged]}>
             <viewContext.Provider value = {[view,updateView]}>
               <Header />
+              
               <div className="posts">
                 <div></div>
                 <Switch>

@@ -10,7 +10,7 @@
 
   width: 200px;
 }
-.post-cont > button {
+.ink {
   padding: 10px;
   width: 100px;
   background-color: dodgerblue;
@@ -18,7 +18,13 @@
   outline: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 .post-cont > textarea{
     padding:5px;
+}
+.commit{
+  display: flex;
+  justify-content: space-around;
 }

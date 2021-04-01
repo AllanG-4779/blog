@@ -2,6 +2,7 @@ import React, { useReducer, useState } from "react";
 import "../CreatePost.css";
 import { postContext } from "../App";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 function CreatePost() {
   const [author, setAuthor] = useState("");
@@ -66,11 +67,18 @@ function CreatePost() {
   var Day = date.getDate();
   const post_day = `${month} ${Day}, ${Year}`;
   const time_to_read = `${Math.ceil((post.length * 0.7) / 60)} mins Read`;
-  const id = Math.random()*Math.pow(54,5)*3322244;
-  //the reducer
+  const id = Math.random() * Math.pow(54, 5) * 3322244;
+  //saving post
+  const [save,setSave] = useState(false)
   const submitting = (event) => {
     event.preventDefault();
-    setPosts([
+    if(author.length< 5||title.length<10 ){
+        alert("Title or Author has not met the length requirements")
+    }else
+      if(post.length < 20){
+        alert("Post too short")
+      }else{
+setPosts([
       ...Post,
       {
         id: id,
@@ -81,7 +89,11 @@ function CreatePost() {
         duration: time_to_read,
       },
     ]);
-  };
+     setSave(prev=>!prev)
+      }
+    }
+    
+  
   return (
     <div>
       <form className="post-cont">
@@ -105,9 +117,30 @@ function CreatePost() {
           rows="10"
           // @ts-ignore
           cols="100"
-          placeholder="Post Content"
+          placeholder="Add post here"
         ></textarea>
-        <button onClick={(e) => submitting(e)}>Post</button>
+        <div className="commit">
+          <button
+            style={{
+              
+              visibility: save ? "hidden" : "visible",
+            }}
+            className="ink"
+            onClick={(e) => submitting(e)}
+          >
+            Save
+          </button>
+          <Link
+            className="ink"
+            style={{
+              backgroundColor: "green",
+              visibility: save ? "visible" : "hidden",
+            }}
+            to="/"
+          >
+            Post
+          </Link>
+        </div>
       </form>
     </div>
   );
