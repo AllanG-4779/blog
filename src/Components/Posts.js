@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "../Posts.css";
-
+import {postContext} from "../App"
+import {useContext} from "react"
 function Posts(props) {
 
- 
+ const [globalPost,setGlobal] = useContext(postContext)
 
   return (
     <div>
-      {props.posts.map((x) => {
+    {globalPost.length===0?<div className="container-post"><p>Nothing to show at the moment</p></div>
+      :globalPost.map((x) => {
         return (
           <div className="container-post" key={Math.random()*1238383.99388584}>
             <p style={{ marginBottom: 4 }}>{x.authors}</p>

@@ -63,8 +63,8 @@ function CreatePost() {
       break;
   }
   var Year = date.getFullYear();
-  var Day = date.getDay();
-  const post_day = `${month} ${Day} ${Year}`;
+  var Day = date.getDate();
+  const post_day = `${month} ${Day}, ${Year}`;
   const time_to_read = `${Math.ceil((post.length * 0.7) / 60)} mins Read`;
   //the reducer
   const submitting = (event) => {
@@ -99,7 +99,9 @@ function CreatePost() {
         <textarea
           value={post}
           onChange={(e) => setPost(e.target.value)}
+          // @ts-ignore
           rows="10"
+          // @ts-ignore
           cols="100"
           placeholder="Post Content"
         ></textarea>
