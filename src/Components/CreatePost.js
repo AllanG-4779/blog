@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import "../CreatePost.css";
 import { postContext } from "../App";
 import { useContext } from "react";
@@ -61,6 +61,9 @@ function CreatePost() {
 
     case 11:
       month = "Dec";
+      break;
+    default:
+      month = undefined;
       break;
   }
   var Year = date.getFullYear();

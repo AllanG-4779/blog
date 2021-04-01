@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Posts.css";
 import { postContext, viewContext } from "../App";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-function Posts(props) {
-  const [globalPost, setGlobal] = useContext(postContext);
-  const [view,updateView] = useContext(viewContext)
+function Posts() {
+  const [globalPost] = useContext(postContext);
+  const [updateView] = useContext(viewContext)
 
   return (
     <div>

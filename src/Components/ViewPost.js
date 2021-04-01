@@ -1,10 +1,10 @@
 import React from "react";
 import "../ViewPost.css";
-import {postContext, viewContext} from "../App"
+import { viewContext} from "../App"
 import {useContext} from "react"
 
 function ViewPost() {
-const [view_post,setView] = useContext(viewContext)
+const [view_post] = useContext(viewContext)
 
   
   return (

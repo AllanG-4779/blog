@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Header.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { logged } from "../App";
 function Header() {
-  const [login,setLogin] = useContext(logged);
-  const [isLog, changeState] = useState(login)
+  const [login, setLogin] = useContext(logged);
+
   return (
     <div>
       <nav className="container-header">
@@ -45,7 +45,6 @@ function Header() {
             >
               Login to add post
             </button>
-          
           </div>
         )}
       </nav>
