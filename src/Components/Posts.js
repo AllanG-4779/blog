@@ -5,7 +5,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 function Posts() {
   const [globalPost] = useContext(postContext);
-  const [updateView] = useContext(viewContext)
+
+  const updateView =  useContext(viewContext)[1]
 
   return (
     <div>

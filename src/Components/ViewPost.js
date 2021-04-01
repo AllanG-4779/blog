@@ -1,24 +1,22 @@
 import React from "react";
 import "../ViewPost.css";
-import { viewContext} from "../App"
-import {useContext} from "react"
+import { viewContext } from "../App";
+import { useContext } from "react";
 
 function ViewPost() {
-const [view_post] = useContext(viewContext)
+  const [view_post] = useContext(viewContext);
 
-  
   return (
     <div className="post-view">
       <div className="details">
         <p>
-          Posted by  <span style={{ color: "dodgerblue" }}>{view_post.authors}</span>
+          Posted by{" "}
+          <span style={{ color: "dodgerblue" }}>{view_post.authors}</span>
         </p>
-        <p>Posted on  {view_post.time}</p>
+        <p>Posted on {view_post.time}</p>
       </div>
       <div className="post-content">
-        <p>
-          {view_post.posts}
-        </p>
+        <p>{view_post.posts}</p>
       </div>
     </div>
   );
