@@ -66,12 +66,14 @@ function CreatePost() {
   var Day = date.getDate();
   const post_day = `${month} ${Day}, ${Year}`;
   const time_to_read = `${Math.ceil((post.length * 0.7) / 60)} mins Read`;
+  const id = Math.random()*Math.pow(54,5)*3322244;
   //the reducer
   const submitting = (event) => {
     event.preventDefault();
     setPosts([
       ...Post,
       {
+        id: id,
         authors: author,
         titles: title,
         posts: post,

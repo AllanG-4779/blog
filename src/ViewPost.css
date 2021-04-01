@@ -1,0 +1,26 @@
+.post-view{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    flex-direction :row;
+    margin-bottom:20px;
+}
+.details>p:nth-child(odd){
+    font-weight: bold;
+    font-size: larger;
+}
+.details>p:nth-child(even){
+    color:grey;
+}
+.post-content{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-stretch: expanded;
+    font-weight: lighter;
+}

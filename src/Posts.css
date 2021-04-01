@@ -18,3 +18,9 @@
     justify-self: flex-end;
 
 }
+.clickable{
+    line-height: 1.5em;
+    text-decoration: none;
+    color:inherit;
+}
+

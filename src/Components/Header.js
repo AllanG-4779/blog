@@ -24,11 +24,28 @@ function Header() {
                 Home
               </Link>
             </p>
-            <button  className="button" onClick={()=>{setLogin(prev=>!prev)}} >Logout</button>
+            <Link
+              to="/"
+              style={{ textDecoration: "none" }}
+              className="button"
+              onClick={() => {
+                setLogin((prev) => !prev);
+              }}
+            >
+              Logout
+            </Link>
           </div>
         ) : (
           <div className="container-h2">
-            <button onClick={()=>{setLogin(prev=>!prev) }} className="button">Login to add post</button>
+            <button
+              onClick={() => {
+                setLogin((prev) => !prev);
+              }}
+              className="button"
+            >
+              Login to add post
+            </button>
+          
           </div>
         )}
       </nav>
